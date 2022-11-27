@@ -56,7 +56,7 @@ rownames(da_ncldv) <- da_ncldv$...1
 
 da_ncldv %>% select(2:271) %>% t() %>% head()
 
-##这有时候会有bug
+## sometimes bug
 da_ncldv %>% select(contains("Fa")) %>% mutate(ro = rowSums(.)) %>% as_tibble() %>% filter(  ro  >0) %>% select(-ro) -> ncldv_fa
 
 
@@ -71,7 +71,7 @@ da_ncldv %>% select(contains(c(".T" ,".D"))) %>% mutate(ro = rowSums(.)) %>% fil
 #merge_fa[,2:1161] %>% t() %>% data.frame() -> merge_fa_t
 #merge_fa_t$co1 <- apply(merge_fa_t, 1, FUN =function(x) sum(x>0)) #
 #################3 network - ncldv -18S###############################
-#合并
+#combined
 fa_da_18S %>% t() %>% data.frame() -> fa_da_18S_t
 ncldv_fa %>% t() %>% data.frame() -> ncldv_fa_t
 dim(ncldv_fa_t)
