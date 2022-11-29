@@ -1,6 +1,5 @@
 ########working dir###############
 setwd("C:\\Users\\fengsw\\Desktop\\")
-load("18S/NCLDV_figure.RData")
 library(tidyverse)
 library(reshape2)
 library(ggpubr)
